@@ -25,7 +25,6 @@ jobs:
 
       - name: Setup node env 🏗
         uses: actions/setup-node@v2.1.5
-        working-directory: ./frontend/personal-site
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
