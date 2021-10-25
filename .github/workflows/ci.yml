@@ -30,8 +30,7 @@ jobs:
           check-latest: true
 
       - name: Go to frontend path
-        run: cd frontend
-        run: cd personal-site
+        run: cd frontend/personal-site
 
       - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
