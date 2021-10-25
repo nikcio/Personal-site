@@ -29,8 +29,9 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      # - name: Go to frontend path
-      #   run: cd .\frontend\personal-site\
+      - name: Go to frontend path
+        run: cd frontend
+        run: cd personal-site
 
       - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
