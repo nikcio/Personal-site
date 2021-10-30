@@ -11,7 +11,7 @@ module.exports = {
        'dubai-medium': ['"Dubai Medium"'],
        'dubai-bold': ['"Dubai Bold"']
       },
-      backgroundColor: theme => ({
+      backgroundColor: () => ({
         'light-blue': '#94B0DA',
         'light-orange': '#FCDDBC',
         'light-red': '#EF959D',
