@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2><a href="google.com">Nikcio</a></h2>
+  <div class="logo">
+    <h2><a href="/">Nikcio</a></h2>
   </div>
 </template>
 

@@ -1,14 +1,23 @@
 <template>
   <div>
-    <Logo/>
-    <ContactCta/>
+    <Logo />
+    <Hero />
+    <ContactCta />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
-export default Vue.extend({})
+import Hero from '../components/partials/Hero.vue'
+import Logo from '../components/elements/basics/Logo.vue'
+import ContactCta from '../components/elements/ContactCta.vue'
+export default Vue.extend({
+  components: {
+    Logo,
+    ContactCta,
+    Hero
+  }
+})
 </script>
 
 <style>

@@ -1,12 +1,23 @@
 <template>
-  <div>
-    <a href="google.com">Developer</a>
+  <div class="contactcta">
+    <a href="/contact">Contact</a>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+
+})
+</script>
+
 <style scoped>
+div.contactcta {
+  @apply absolute bottom-12 left-4
+}
+
 a {
-  @apply text-4xl font-dubai-light m-4 absolute bottom-12 left-4 transform transition duration-100
+  @apply text-4xl font-dubai-light m-4 transform transition duration-100
 }
 
 a::after {
