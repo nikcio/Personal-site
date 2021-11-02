@@ -23,6 +23,6 @@ export default Vue.extend({
 
 <style scoped>
 div.hero {
-  @apply relative mr-10 flex flex-col w-1/2 float-right
+  @apply relative pl-20 md:pl-0 pr-10 md:pr-0 lg:mr-20 flex flex-col w-full md:w-3/4 lg:w-1/2 float-right
 }
 </style>

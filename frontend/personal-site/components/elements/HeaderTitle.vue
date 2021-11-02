@@ -22,12 +22,12 @@ div.headerTitle {
 }
 
 h1 {
-  @apply text-8xl font-dubai m-12 ml-16 relative
+  @apply text-6xl md:text-8xl font-dubai m-12 ml-16 relative
 }
 
 h1::after {
   content: '';
-  @apply bg-light-orange w-52 h-52 absolute top-1/2
-  transform -translate-y-1/2 -left-24 -z-10 rounded-full
+  @apply bg-light-orange w-36 md:w-52 h-36 md:h-52 absolute top-1/2
+  transform -translate-y-1/2 -left-20 md:-left-24 -z-10 rounded-full
 }
 </style>

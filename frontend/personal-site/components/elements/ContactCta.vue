@@ -13,18 +13,18 @@ export default Vue.extend({
 
 <style scoped>
 div.contactcta {
-  @apply absolute bottom-12 left-4
+  @apply absolute bottom-12 left-4 z-50
 }
 
 a {
-  @apply text-4xl font-dubai-light m-4 transform transition duration-100
+  @apply text-2xl md:text-4xl font-dubai-light m-4 transform transition duration-100
 }
 
 a::after {
   content: '';
   @apply bg-light-red w-20 h-20 absolute top-1/2 left-1/2
   transform -translate-y-10 -translate-x-1/2 -z-10 rounded-full
-  transition duration-500
+  transition duration-500 scale-125 md:scale-100
 }
 
 a:hover::after {
