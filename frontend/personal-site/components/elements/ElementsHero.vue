@@ -14,12 +14,12 @@
         linkText="Email me"
         link="mailto:devnikcio@gmail.com"
         :showIcon="true"
-        iconSource="icons/mail-icon.svg"
+        iconSource="/icons/mail-icon.svg"
         iconAlt="mail"
       />
     </div>
     <div>
-      <img src="images/hero-image.webp" alt="hero image" class="hero-image" />
+      <Image imageSource="/images/hero-image.webp" alt="hero image" class="hero-image" />
     </div>
   </section>
 </template>
@@ -44,6 +44,7 @@ section {
 
 .hero-image {
   max-width: 50vw;
+  max-height: 80vh;
 }
 
 @media (max-width: 1100px) {
