@@ -14,4 +14,7 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+  "vue/multi-word-component-names": ["error", {
+    "ignores": ["index"]
+  }]
 };
