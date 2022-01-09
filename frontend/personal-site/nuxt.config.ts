@@ -13,5 +13,11 @@ export default defineNuxtConfig({
     },
     nitro: {
         preset: 'server'
-    }
+    },
+    server: {
+        https: true
+    },
+    publicRuntimeConfig: {
+        BASE_URL: process.env.BASE_URL
+    },
 })

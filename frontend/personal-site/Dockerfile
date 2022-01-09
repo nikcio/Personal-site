@@ -25,6 +25,7 @@ COPY --from=BUILD_IMAGE /app/.output ./.output
 
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000
+ENV BASE_URL=https://nikcio.com
 
 EXPOSE 3000
 
