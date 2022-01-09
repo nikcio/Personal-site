@@ -5,11 +5,11 @@ services:
     build:
       context: frontend/personal-site
     ports:
-      - "6000:3000"
+      - "4500:3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.tcp.routers.nuxt.entrypoints=defaultsecure"
-      - "traefik.tcp.routers.nuxt.rule=HostSNI(`nikcio.com`)"
+      - "traefik.tcp.routers.website-fe.entrypoints=defaultsecure"
+      - "traefik.tcp.routers.website-fe.rule=HostSNI(`nikcio.com`)"
   traefik:
     # The official v2 Traefik docker image
     image: traefik:v2.5
