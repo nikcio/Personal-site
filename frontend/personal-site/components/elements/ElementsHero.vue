@@ -10,16 +10,16 @@
         design experiences for the web.
       </p>
       <ButtonsMedium
-        :internalLink="false"
-        linkText="Email me"
+        :internal-link="false"
+        link-text="Email me"
         link="mailto:devnikcio@gmail.com"
-        :showIcon="true"
-        iconSource="/icons/mail-icon.svg"
-        iconAlt="mail"
+        :show-icon="true"
+        icon-source="/icons/mail-icon.svg"
+        icon-alt="mail"
       />
     </div>
     <div>
-      <Image imageSource="/images/hero-image.webp" alt="hero image" class="hero-image" />
+      <Image image-source="/images/hero-image.webp" alt="hero image" class="hero-image" />
     </div>
   </section>
 </template>

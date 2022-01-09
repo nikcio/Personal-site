@@ -10,17 +10,26 @@ import './assets/css/tailwind.css'
 var fadeInElements = []
 var fadeOutElements = []
 
+// eslint-disable-next-line no-undef
 onMounted(() => {
   fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
   fadeOutElements = Array.from(document.getElementsByClassName('fade-out'))
   document.addEventListener('scroll', handleScroll)
 })
 
+// eslint-disable-next-line no-undef
 onUnmounted(() => {
   document.removeEventListener('scroll', handleScroll)
 })
 
-const handleScroll = (evt) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const handleScroll = (_evt: unknown) => {
+  handleFadeOutElements()
+
+  handleFadeInElements()
+}
+
+const handleFadeOutElements = () => {
   for (var i = 0; i < fadeOutElements.length; i++) {
     var elem = fadeOutElements[i]
     if (!isElemVisible(elem)) {
@@ -30,7 +39,9 @@ const handleScroll = (evt) => {
       fadeInElements.push(elem)
     }
   }
+}
 
+const handleFadeInElements = () => {
   for (var i = 0; i < fadeInElements.length; i++) {
     var elem = fadeInElements[i]
     if (isElemVisible(elem)) {

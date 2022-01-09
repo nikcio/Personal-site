@@ -1,24 +1,39 @@
 <template>
   <ButtonsBase
-    :internalLink="internalLink"
-    :linkText="linkText"
+    :internal-link="internalLink"
+    :link-text="linkText"
     :link="link"
-    :showIcon="showIcon"
-    :iconSource="iconSource"
-    :iconAlt="iconAlt"
+    :show-icon="showIcon"
+    :icon-source="iconSource"
+    :icon-alt="iconAlt"
     class="medium-button"
   />
 </template>
 
 <script lang="ts" setup>
+/* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
   internalLink: Boolean,
-  link: String,
-  linkText: String,
+  link: {
+    type: String,
+    default: ""
+  },
+  linkText: {
+    type: String,
+    default: ""
+  },
   showIcon: Boolean,
-  iconSource: String,
-  iconAlt: String,
+  iconSource: {
+    type: String,
+    default: ""
+  },
+  iconAlt: {
+    type: String,
+    default: ""
+  },
 });
+/* eslint-enable no-undef */
 </script>
 
 <style scoped>

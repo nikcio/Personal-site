@@ -10,14 +10,29 @@
 </template>
 
 <script lang="ts" setup>
+/* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
   internalLink: Boolean,
-  link: String,
-  linkText: String,
+  link: {
+    type: String,
+    default: ""
+  },
+  linkText: {
+    type: String,
+    default: ""
+  },
   showIcon: Boolean,
-  iconSource: String,
-  iconAlt: String,
+  iconSource: {
+    type: String,
+    default: ""
+  },
+  iconAlt: {
+    type: String,
+    default: ""
+  },
 });
+/* eslint-enable no-undef */
 </script>
 
 <style>

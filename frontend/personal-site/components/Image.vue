@@ -1,9 +1,19 @@
 <template>
-    <img :src="imageSource" />
+  <img :src="imageSource" :alt="imageAlt" />
 </template>
 
 <script lang="ts" setup>
+/* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
-    imageSource: String,
+  imageSource: {
+    type: String,
+    default: ""
+  },
+  imageAlt: {
+    type: String,
+    default: ""
+  },
 })
+/* eslint-enable no-undef */
 </script>

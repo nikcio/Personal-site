@@ -14,7 +14,20 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  "vue/multi-word-component-names": ["error", {
-    "ignores": ["index"]
-  }]
+  "rules": {
+      "vue/multi-word-component-names": ["error", {
+        "ignores": ["index"]
+      }],
+      "vue/max-attributes-per-line": ["off"],
+      "vue/html-self-closing": ["error", {
+        "html": {
+          "void": "always",
+          "normal": "always",
+          "component": "always"
+        },
+        "svg": "always",
+        "math": "always"
+      }],
+      "vue/no-v-html": ["off"]
+  }
 };

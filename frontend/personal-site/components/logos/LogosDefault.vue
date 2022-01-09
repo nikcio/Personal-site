@@ -1,5 +1,7 @@
 <template>
-  <p class="logo">Nikcio</p>
+  <p class="logo">
+    Nikcio
+  </p>
 </template>
 
 <style scoped>

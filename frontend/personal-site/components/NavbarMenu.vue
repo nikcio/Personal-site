@@ -2,17 +2,32 @@
   <nav>
     <LogosDefault />
     <div class="center-nav">
-      <NuxtLink class="active" to="/">Home</NuxtLink>
-      <NuxtLink to="/projects" title="Work in progress">Projects</NuxtLink>
-      <NuxtLink to="/experience" title="Work in progress">Experience</NuxtLink>
+      <NuxtLink
+        class="active"
+        to="/"
+      >
+        Home
+      </NuxtLink>
+      <NuxtLink
+        to="/projects"
+        title="Work in progress"
+      >
+        Projects
+      </NuxtLink>
+      <NuxtLink
+        to="/experience"
+        title="Work in progress"
+      >
+        Experience
+      </NuxtLink>
     </div>
     <ButtonsSlim
-      :internalLink="false"
-      linkText="Download CV"
+      :internal-link="false"
+      link-text="Download CV"
       link="/files/cv.pdf"
-      :showIcon="true"
-      iconSource="/icons/download-icon.svg"
-      iconAlt="download"
+      :show-icon="true"
+      icon-source="/icons/download-icon.svg"
+      icon-alt="download"
     />
   </nav>
 </template>

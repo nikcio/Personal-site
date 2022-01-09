@@ -1,17 +1,26 @@
 <template>
-    <section>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/nikcio/">
-                <Image imageSource="/icons/socials/linkedin-icon.svg" alt="linkedin" />
-            </a>
-            <a href="https://our.umbraco.com/members/nikcio/">
-                <Image imageSource="/icons/socials/umbraco-icon.svg" alt="umbraco" />
-            </a>
-            <a href="https://github.com/nikcio">
-                <Image imageSource="/icons/socials/github-icon.svg" alt="github" />
-            </a>
-        </div>
-    </section>
+  <section>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/nikcio/">
+        <Image
+          image-source="/icons/socials/linkedin-icon.svg"
+          alt="linkedin"
+        />
+      </a>
+      <a href="https://our.umbraco.com/members/nikcio/">
+        <Image
+          image-source="/icons/socials/umbraco-icon.svg"
+          alt="umbraco"
+        />
+      </a>
+      <a href="https://github.com/nikcio">
+        <Image
+          image-source="/icons/socials/github-icon.svg"
+          alt="github"
+        />
+      </a>
+    </div>
+  </section>
 </template>
 
 <style scoped>
