@@ -38,7 +38,7 @@ const props = defineProps({
 <style>
 .button {
   @apply flex items-center gap-1 text-white relative;
-  background: #ef6f6c;
+  background: #e06865;
   filter: drop-shadow(4px 4px 0 #370706);
   transition: filter 0.2s;
   width: fit-content;

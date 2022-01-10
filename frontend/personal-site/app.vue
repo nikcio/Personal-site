@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Head } from 'nuxt3/dist/meta/runtime/components'
 import './assets/css/tailwind.css'
 
 var fadeInElements = []

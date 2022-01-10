@@ -2,24 +2,9 @@
   <nav>
     <LogosDefault />
     <div class="center-nav">
-      <NuxtLink
-        class="active"
-        to="/"
-      >
-        Home
-      </NuxtLink>
-      <NuxtLink
-        to="/projects"
-        title="Work in progress"
-      >
-        Projects
-      </NuxtLink>
-      <NuxtLink
-        to="/experience"
-        title="Work in progress"
-      >
-        Experience
-      </NuxtLink>
+      <NuxtLink class="active" to="/">Home</NuxtLink>
+      <NuxtLink to="/projects" title="Work in progress">Projects</NuxtLink>
+      <NuxtLink to="/experience" title="Work in progress">Experience</NuxtLink>
     </div>
     <ButtonsSlim
       :internal-link="false"
@@ -52,25 +37,25 @@ nav .center-nav a {
 nav .center-nav a::before {
   content: "";
   @apply w-0 absolute;
-  border: 0 solid #ef6f6c;
-  background: #ef6f6c;
+  border: 0 solid #e06865;
+  background: #e06865;
   bottom: -5px;
   transition: width 0.3s;
 }
 
 nav .center-nav a.active::before {
   @apply w-full;
-  border: 1.5px solid #ef6f6c;
+  border: 1.5px solid #e06865;
 }
 
 nav .center-nav a:hover::before {
   @apply w-full;
-  border: 1.5px solid #ef6f6c;
+  border: 1.5px solid #e06865;
 }
 
 @media (max-width: 640px) {
   nav .center-nav {
-    background: #ef6f6c;
+    background: #e06865;
     margin: 0 -20px;
   }
 
