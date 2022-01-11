@@ -63,14 +63,8 @@ const isElemVisible = (el) => {
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      title: 'Nikcio'
-    }
-  },
   head() {
     return {
-      title: this.title,
       meta: [
         {
           hid: 'description',
