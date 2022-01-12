@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/nikcio/Personal-site/compare/v1.0.0...v1.1.0) (2022-01-12)
+
+
+### Features
+
+* Added favicon ([9702b69](https://github.com/nikcio/Personal-site/commit/9702b69ccb5b35e9ab3658f5b33004846cda3e1f))
+* Added projects & experience pages ([5ad0638](https://github.com/nikcio/Personal-site/commit/5ad0638fd110e9f226bddebc1e0549759ac600b6))
+
 ## 1.0.0 (2022-01-12)
 
 
