@@ -7,7 +7,7 @@
     "start": "node .output/server/index.mjs",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix .",
     "lint": "yarn lint:js",
-    "release": "standard-version && git push --follow-tags origin main"
+    "release": "standard-version"
   },
   "dependencies": {
     "nuxt3": "^3.0.0-27356801.e9128f3",
