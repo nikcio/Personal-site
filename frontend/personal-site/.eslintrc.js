@@ -16,7 +16,7 @@ module.exports = {
   ],
   "rules": {
       "vue/multi-word-component-names": ["error", {
-        "ignores": ["index"]
+        "ignores": ["index", "projects", "experience"]
       }],
       "vue/max-attributes-per-line": ["off"],
       "vue/html-self-closing": ["error", {
