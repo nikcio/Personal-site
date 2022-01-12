@@ -28,6 +28,7 @@ module.exports = {
         "svg": "always",
         "math": "always"
       }],
-      "vue/no-v-html": ["off"]
+      "vue/no-v-html": ["off"],
+      "vue/singleline-html-element-content-newline": ["off"]
   }
 };
