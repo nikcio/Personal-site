@@ -1,9 +1,5 @@
 <template>
-  <div class="container">
-    <NavbarMenu />
-    <NuxtPage />
-    <ElementsFooter />
-  </div>
+  <NuxtPage />
 </template>
 
 <script lang="ts" setup>

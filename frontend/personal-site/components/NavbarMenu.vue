@@ -2,9 +2,17 @@
   <nav>
     <LogosDefault />
     <div class="center-nav">
-      <NuxtLink class="active" to="/">Home</NuxtLink>
-      <NuxtLink to="/projects" title="Work in progress">Projects</NuxtLink>
-      <NuxtLink to="/experience" title="Work in progress">Experience</NuxtLink>
+      <NuxtLink :class="{ 'active': activeElement == 0 }" to="/">Home</NuxtLink>
+      <NuxtLink
+        :class="{ 'active': activeElement == 1 }"
+        to="/projects"
+        title="Work in progress"
+      >Projects</NuxtLink>
+      <NuxtLink
+        :class="{ 'active': activeElement == 2 }"
+        to="/experience"
+        title="Work in progress"
+      >Experience</NuxtLink>
     </div>
     <ButtonsSlim
       :internal-link="false"
@@ -16,6 +24,18 @@
     />
   </nav>
 </template>
+
+<script lang="ts" setup>
+/* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const props = defineProps({
+  activeElement: {
+    type: Number,
+    default: 0
+  }
+})
+/* eslint-enable no-undef */
+</script>
 
 <style scoped>
 nav {
