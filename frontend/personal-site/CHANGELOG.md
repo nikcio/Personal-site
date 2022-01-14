@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/nikcio/Personal-site/compare/v1.1.0...v1.2.0) (2022-01-14)
+
+
+### Features
+
+* Added project ([a8a1071](https://github.com/nikcio/Personal-site/commit/a8a1071dbb3c31a8c41c380b20a06a1c118fbb20))
+
 ## [1.1.0](https://github.com/nikcio/Personal-site/compare/v1.0.0...v1.1.0) (2022-01-12)
 
 
