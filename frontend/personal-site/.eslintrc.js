@@ -29,6 +29,7 @@ module.exports = {
         "math": "always"
       }],
       "vue/no-v-html": ["off"],
-      "vue/singleline-html-element-content-newline": ["off"]
+      "vue/singleline-html-element-content-newline": ["off"],
+      "vue/attribute-hyphenation": ["off"]
   }
 };
