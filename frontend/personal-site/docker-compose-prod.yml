@@ -21,3 +21,8 @@ services:
       # Middlewares
       - "traefik.http.routers.personal-site_website-fe.middlewares=https"
       - "traefik.http.middlewares.https.redirectscheme.scheme=https"
+
+networks:
+  default:
+    external:
+      name: traefik
