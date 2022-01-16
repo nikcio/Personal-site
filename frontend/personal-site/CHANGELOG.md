@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/nikcio/Personal-site/compare/v1.2.0...v1.3.0) (2022-01-16)
+
+
+### Features
+
+* Added navbar hover effect size ([7107b7a](https://github.com/nikcio/Personal-site/commit/7107b7aaf19946bf7194223445a839c44d4f8e9a))
+* Added project personal server ([3a31533](https://github.com/nikcio/Personal-site/commit/3a315330d2690e3fe6e896d780d03f7271cecb78))
+* Removed old files ([a41ca92](https://github.com/nikcio/Personal-site/commit/a41ca92dc55fc38679e09ed6360df5b40b719467))
+
 ## [1.2.0](https://github.com/nikcio/Personal-site/compare/v1.1.0...v1.2.0) (2022-01-14)
 
 
