@@ -29,7 +29,7 @@ services:
       # Middlewares
       - "traefik.http.routers.dashboard.middlewares=https, auth"
       - "traefik.http.middlewares.https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.auth.basicauth.users=nikcio:$2y$10$AF7oUcQVDLOsatOch9HfWeYeck.5epVQLfhKegZZOsGJOc8Z92Bg2"
+      - "traefik.http.middlewares.auth.basicauth.users=nikcio:$$2y$$10$$AF7oUcQVDLOsatOch9HfWeYeck.5epVQLfhKegZZOsGJOc8Z92Bg2"
 
     volumes:
       - "/home/nikcio/traefik/config:/etc/traefik"
