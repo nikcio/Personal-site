@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  portainer:
+    container_name: Portainer
+    image: cr.portainer.io/portainer/portainer-ce:2.11.0
+    command: -H unix:///var/run/docker.sock
+    restart: unless-stopped
+    labels:
+      # Watchtower
+      - "com.centurylinklabs.watchtower.enable=false"
+      # Traefik enable
+      - "traefik.enable=true"
+      # Entrypoints
+      - "traefik.http.routers.portainer.entrypoints=defaulthttp, defaultsecure"
+      # Domains
+      - "traefik.http.routers.portainer.rule=Host(`docker.nikcio.com`)"
+      - "traefik.http.routers.portainer.tls.domains[0].main=nikcio.com"
+      - "traefik.http.routers.portainer.tls.domains[0].sans=*.nikcio.com"
+      # TLS
+      - "traefik.http.routers.portainer.tls=true"
+      - "traefik.http.routers.portainer.tls.certresolver=defaultresolver"
+      # Middlewares
+      - "traefik.http.routers.portainer.middlewares=https"
+      - "traefik.http.middlewares.https.redirectscheme.scheme=https"
+      # Services
+      - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+      - "traefik.http.routers.portainer.service=portainer"
+
+      # Edge
+      - "traefik.http.routers.edge.entrypoints=defaulthttp, defaultsecure"
+      # Services
+      - "traefik.http.services.edge.loadbalancer.server.port=8000"
+      - "traefik.http.routers.edge.service=edge"
+      # TLS
+      - "traefik.http.routers.edge.tls=true"
+      - "traefik.http.routers.edge.tls.certresolver=defaultresolver"
+      # Domains
+      - "traefik.http.routers.edge.rule=Host(`edge.nikcio.com`)"
+      - "traefik.http.routers.edge.tls.domains[0].main=nikcio.com"
+      - "traefik.http.routers.edge.tls.domains[0].sans=*.nikcio.com"
+    volumes:
+      - "portainer_data:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+volumes:
+  portainer_data:
+    external: true
+
+networks:
+  default:
+    external:
+      name: traefik
