@@ -51,7 +51,11 @@ nav .center-nav {
 }
 
 nav .center-nav a {
-  @apply relative;
+  @apply relative transition-all duration-200;
+}
+
+nav .center-nav a:hover {
+  transform: scale(1.1);
 }
 
 nav .center-nav a::before {
