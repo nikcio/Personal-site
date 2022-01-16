@@ -24,6 +24,6 @@ const activeElement = 0;
 
 // eslint-disable-next-line no-undef
 useMeta(() => ({
-  title: 'Homepage'
+  title: 'Nikcio - Homepage'
 }))
 </script>
