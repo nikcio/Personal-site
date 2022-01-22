@@ -4,6 +4,7 @@ services:
   personal-site_website-fe:
     container_name: Personal-site-fe
     image: registry.digitalocean.com/nikcio/personal-site-fe
+    restart: unless-stopped
     labels:
       # Watchtower
       - "com.centurylinklabs.watchtower.enable=true"
