@@ -20,13 +20,6 @@ onUnmounted(() => {
   document.removeEventListener('scroll', handleScroll)
 })
 
-// eslint-disable-next-line no-undef
-onUpdated(() => {
-  console.log("hello")
-  fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
-  fadeOutElements = Array.from(document.getElementsByClassName('fade-out'))
-})
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const handleScroll = (_evt: unknown) => {
   handleFadeOutElements()
