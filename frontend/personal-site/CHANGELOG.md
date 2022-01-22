@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/nikcio/Personal-site/compare/v1.3.0...v1.4.0) (2022-01-22)
+
+
+### Features
+
+* Updated experience and cv ([71fffa6](https://github.com/nikcio/Personal-site/commit/71fffa6fe6da95a5b369b505b1399564f57d0672))
+
 ## [1.3.0](https://github.com/nikcio/Personal-site/compare/v1.2.0...v1.3.0) (2022-01-16)
 
 
