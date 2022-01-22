@@ -1,22 +1,18 @@
+# Build project
 FROM node:17 AS BUILD_IMAGE
 
-# Create app directory
 WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
 COPY package*.json ./
+COPY yarn.lock ./
 
 RUN yarn --production
-# If you are building your code for production
-# RUN npm ci --only=production
 
-# Bundle app source
 COPY . .
 
 RUN yarn build
 
+# Create minified image
 FROM node:17-alpine
 
 WORKDIR /app
