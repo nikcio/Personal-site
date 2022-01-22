@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
+    "docker": "docker-compose -f ./docker-compose-dev.yml up --build",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore --fix .",

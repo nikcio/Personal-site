@@ -5,3 +5,4 @@ services:
     container_name: personal-site_website-fe
     build:
       context: .
+      dockerfile: Dockerfile-build
