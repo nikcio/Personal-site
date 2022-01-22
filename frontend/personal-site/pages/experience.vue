@@ -2,7 +2,7 @@
   <div class="container">
     <NavbarMenu :activeElement="activeElement" />
     <main>
-      <h1>Work in progress...</h1>
+      <Image imageSource="/files/cv_website.svg" imageAlt="CV" />
     </main>
     <ElementsFooter />
   </div>
@@ -16,3 +16,9 @@ useMeta(() => ({
   title: 'Experience'
 }))
 </script>
+
+<style scoped>
+img {
+  width: 100%;
+}
+</style>

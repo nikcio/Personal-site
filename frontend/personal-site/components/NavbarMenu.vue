@@ -17,7 +17,7 @@
     <ButtonsSlim
       :internal-link="false"
       link-text="Download CV"
-      link="/files/cv.pdf"
+      link="/files/cv_public.pdf"
       :show-icon="true"
       icon-source="/icons/download-icon.svg"
       icon-alt="download"
