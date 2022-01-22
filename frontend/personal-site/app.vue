@@ -5,11 +5,15 @@
 <script lang="ts" setup>
 import './assets/css/tailwind.css'
 
-var fadeInElements = []
-var fadeOutElements = []
+let fadeInElements = []
+let fadeOutElements = []
+let currentPageRoute = null
+// eslint-disable-next-line no-undef
+let route = useRoute()
 
 // eslint-disable-next-line no-undef
 onMounted(() => {
+  currentPageRoute = route.path
   fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
   fadeOutElements = Array.from(document.getElementsByClassName('fade-out'))
   document.addEventListener('scroll', handleScroll)
@@ -22,6 +26,13 @@ onUnmounted(() => {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const handleScroll = (_evt: unknown) => {
+  console.log(route)
+  if (currentPageRoute != route.path) {
+    currentPageRoute = route.path
+    fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
+    fadeOutElements = Array.from(document.getElementsByClassName('fade-out'))
+  }
+
   handleFadeOutElements()
 
   handleFadeInElements()

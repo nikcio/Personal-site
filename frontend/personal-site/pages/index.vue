@@ -6,13 +6,13 @@
       <ElementsBigTitle
         text="Let’s<br />Connect"
         image-source="/images/backdrops/dots-red.svg"
-        class="fade-in fade-out"
+        class="fade-out"
       />
-      <ElementsSocials class="fade-in fade-out" />
+      <ElementsSocials class="fade-out" />
       <ElementsBigTitle
         text="Get to<br>know me"
         image-source="/images/backdrops/dots-blue.svg"
-        class="fade-in fade-out"
+        class="fade-out"
       />
     </main>
     <ElementsFooter />
