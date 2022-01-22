@@ -1,8 +1,12 @@
 <template>
   <footer>
-    <span>© Nikcio 2019-2022</span>
+    <span>© Nikcio 2019-{{ currentYear }}</span>
   </footer>
 </template>
+
+<script lang="ts" setup>
+const currentYear = new Date().getFullYear();
+</script>
 
 <style scoped>
 footer {
