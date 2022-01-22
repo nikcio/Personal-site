@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/nikcio/Personal-site/compare/v1.4.0...v1.5.0) (2022-01-22)
+
+
+### Features
+
+* Added dynamic year to footer ([ad65197](https://github.com/nikcio/Personal-site/commit/ad651977e8fcbcfead0b02aca2495d739cb647be))
+
+
+### Bug Fixes
+
+* Partial fix for page scrol effect ([3f59cdb](https://github.com/nikcio/Personal-site/commit/3f59cdbbc349ba6281844b3d74901276496ab9f9))
+
 ## [1.4.0](https://github.com/nikcio/Personal-site/compare/v1.3.0...v1.4.0) (2022-01-22)
 
 
