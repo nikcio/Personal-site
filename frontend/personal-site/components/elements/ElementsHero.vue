@@ -6,7 +6,7 @@
         <br />I'm Nikolaj
       </h1>
       <p class="hero-text">
-        I’am a web developer based in Denmark who loves to craft attractive
+        I’m a web developer based in Denmark who loves to craft attractive
         design experiences for the web.
       </p>
       <ButtonsMedium
