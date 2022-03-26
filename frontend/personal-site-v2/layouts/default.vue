@@ -2,12 +2,12 @@
   <div>
     <b-navbar>
       <template #brand>
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+        <b-navbar-item tag="router-link" :to="{ path: '/' }" exact>
           <LogosDefault />
         </b-navbar-item>
       </template>
       <template #start>
-        <b-navbar-item tag="router-link" :to="{ path: '/' }" :active="true">Home</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: '/' }" exact>Home</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/blog' }">Blog</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/about' }">About</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/experience' }">Experience</b-navbar-item>
@@ -16,10 +16,17 @@
       <template #end>
         <b-navbar-item tag="div">
           <div class="buttons">
-            <NuxtLink class="button is-primary" :to="'/contact'">
+            <b-button type="is-primary" tag="router-link" :to="'/contact'">
               <strong>Contact</strong>
-            </NuxtLink>
-            <a class="button is-light" href="/files/cv_public.pdf" target="_blank">Download CV</a>
+            </b-button>
+            <b-button
+              tag="a"
+              type="is-light"
+              href="/files/cv_public.pdf"
+              target="_blank"
+              icon-left="solid fa-download"
+              icon-pack="fa"
+            >Download CV</b-button>
           </div>
         </b-navbar-item>
       </template>
@@ -35,6 +42,8 @@
 
 <script>
 import LogosDefault from "~/components/logos/LogosDefault.vue"
+import fontawesomeScript from '@fortawesome/fontawesome-free/js/all.js'
+
 export default {
   name: "DefaultLayout",
   data() {
@@ -42,13 +51,23 @@ export default {
 
     };
   },
-  components: { LogosDefault }
+  components: { LogosDefault },
+  head() {
+    return {
+      scripts: [
+        {
+          src: fontawesomeScript,
+          async: true,
+        },
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
 .navbar-start a.navbar-item {
-  @apply relative transition-all duration-200 text-base;
+  @apply relative transition-all duration-200 text-base font-semibold;
 }
 
 .navbar-start a.navbar-item:hover {

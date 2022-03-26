@@ -1,22 +1,30 @@
 <template>
   <section class="section">
     <div class="columns">
-      <div class="column">
+      <div class="column self-center">
         <h1 class="title is-1">
           Hello!
           <br />I'm Nikolaj
         </h1>
-        <p class="subtitle is-3">
+        <p class="subtitle is-4">
           I’m a web developer based in Denmark who loves to craft attractive
           design experiences for the web.
         </p>
-        <ButtonsMedium
-          :internal-link="false"
-          link-text="Email me"
-          link="mailto:devnikcio@gmail.com"
-          :show-icon="true"
-          icon-source="/icons/mail-icon.svg"
-          icon-alt="mail"
+        <b-button
+          type="is-primary"
+          label="Email me"
+          tag="a"
+          href="mailto:devnikcio@gmail.com"
+          icon-left="solid fa-paper-plane"
+          icon-pack="fa"
+        />
+        <b-button
+          type="is-secondary"
+          label="Follow my GitHub"
+          tag="a"
+          href="https://github.com/"
+          icon-left="brands fa-github"
+          icon-pack="fa"
         />
       </div>
       <div class="column">
@@ -32,18 +40,14 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
   name: 'IndexPage',
-  components: {
-    Card,
-  },
 }
 </script>
 
 <style>
 .hero-image {
   max-height: 80vh;
+  border-radius: 10px;
 }
 </style>
