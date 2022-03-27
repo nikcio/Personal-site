@@ -16,8 +16,8 @@
       <template #end>
         <b-navbar-item tag="div">
           <div class="buttons">
-            <b-button type="is-primary" tag="router-link" :to="'/contact'">
-              <strong>Contact</strong>
+            <b-button type="is-primary" tag="router-link" :to="'/hire-me'">
+              <strong>Hire me!</strong>
             </b-button>
             <b-button
               tag="a"
@@ -61,7 +61,7 @@ export default {
         },
       ]
     }
-  }
+  },
 }
 </script>
 
@@ -94,5 +94,14 @@ export default {
 .navbar-start a.navbar-item:hover::before {
   @apply w-full;
   border: 1.5px solid #e06865;
+}
+
+@media (max-width: 1023px) {
+  .navbar-start a.navbar-item.nuxt-link-active::before {
+    @apply w-20;
+    left: 0.75em;
+    transform: none;
+    border: 1.5px solid #e06865;
+  }
 }
 </style>
