@@ -5,12 +5,7 @@
         <div class="column is-half" v-for="item in jobs" :key="item.title">
           <div class="card">
             <div class="card-image">
-              <b-image
-                v-if="item.image"
-                :src="require(item.image)"
-                ratio="10by2"
-                custom-class="job-image"
-              />
+              <b-image v-if="item.image" :src="item.image" ratio="10by2" custom-class="job-image" />
             </div>
             <div class="card-content">
               <h3 class="title is-5" v-if="item.title">{{ item.title }}</h3>
@@ -22,7 +17,7 @@
                   :label="item.link.label"
                   tag="a"
                   target="_blank"
-                  :href="item.link"
+                  :href="item.link.href"
                 />
               </div>
             </div>
@@ -37,7 +32,7 @@
             <div class="card-image">
               <b-image
                 v-if="item.image"
-                :src="require(item.image)"
+                :src="item.image"
                 ratio="10by2"
                 custom-class="education-image"
               />
@@ -52,7 +47,7 @@
                   :label="item.link.label"
                   tag="a"
                   target="_blank"
-                  :href="item.link"
+                  :href="item.link.href"
                 />
               </div>
             </div>
@@ -67,7 +62,7 @@
             <div class="card-image">
               <b-image
                 v-if="item.image"
-                :src="require(item.image)"
+                :src="item.image"
                 ratio="10by2"
                 custom-class="project-image"
               />
@@ -82,7 +77,7 @@
                   :label="item.link.label"
                   tag="a"
                   target="_blank"
-                  :href="item.link"
+                  :href="item.link.href"
                 />
               </div>
             </div>
@@ -96,9 +91,9 @@
 <script>
 export default ({
   props: {
-    educations: Object,
-    jobs: Object,
-    projects: Object
+    educations: Array,
+    jobs: Array,
+    projects: Array
   },
 })
 </script>
