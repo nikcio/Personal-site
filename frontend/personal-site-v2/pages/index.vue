@@ -9,6 +9,11 @@
 <script>
 export default {
   name: 'IndexPage',
+  head() {
+    return {
+      title: "Nikcio - Personal website"
+    }
+  }
 }
 </script>
 

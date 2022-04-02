@@ -1,89 +1,20 @@
 <template>
   <div>
-    <section class="section">
-      <div class="columns is-multiline">
-        <div class="column is-half" v-for="item in jobs" :key="item.title">
-          <div class="card">
-            <div class="card-image">
-              <b-image v-if="item.image" :src="item.image" ratio="10by2" custom-class="job-image" />
-            </div>
-            <div class="card-content">
-              <h3 class="title is-5" v-if="item.title">{{ item.title }}</h3>
-              <p class="subtitle is-6" v-if="item.description">{{ item.description }}</p>
-              <div class="buttons">
-                <b-button
-                  v-if="item.link"
-                  type="is-light"
-                  :label="item.link.label"
-                  tag="a"
-                  target="_blank"
-                  :href="item.link.href"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="section" v-if="jobs && jobs.length > 0">
+      <h3 class="title">Jobs:</h3>
+      <ExperienceCategoryItem :items="jobs" />
     </section>
-    <section class="section">
-      <div class="columns is-multiline">
-        <div class="column is-half" v-for="item in educations" :key="item.title">
-          <div class="card">
-            <div class="card-image">
-              <b-image
-                v-if="item.image"
-                :src="item.image"
-                ratio="10by2"
-                custom-class="education-image"
-              />
-            </div>
-            <div class="card-content">
-              <h3 class="title is-5" v-if="item.title">{{ item.title }}</h3>
-              <p class="subtitle is-6" v-if="item.description">{{ item.description }}</p>
-              <div class="buttons">
-                <b-button
-                  v-if="item.link"
-                  type="is-light"
-                  :label="item.link.label"
-                  tag="a"
-                  target="_blank"
-                  :href="item.link.href"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="section" v-if="certificates && certificates.length > 0">
+      <h3 class="title">Certificates:</h3>
+      <ExperienceCategoryItem :items="certificates" />
     </section>
-    <section class="section">
-      <div class="columns is-multiline">
-        <div class="column is-half" v-for="item in projects" :key="item.title">
-          <div class="card">
-            <div class="card-image">
-              <b-image
-                v-if="item.image"
-                :src="item.image"
-                ratio="10by2"
-                custom-class="project-image"
-              />
-            </div>
-            <div class="card-content">
-              <h3 class="title is-5" v-if="item.title">{{ item.title }}</h3>
-              <p class="subtitle is-6" v-if="item.description">{{ item.description }}</p>
-              <div class="buttons">
-                <b-button
-                  v-if="item.link"
-                  type="is-light"
-                  :label="item.link.label"
-                  tag="a"
-                  target="_blank"
-                  :href="item.link.href"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="section" v-if="educations && educations.length > 0">
+      <h3 class="title">Education:</h3>
+      <ExperienceCategoryItem :items="educations" />
+    </section>
+    <section class="section" v-if="projects && projects.length > 0">
+      <h3 class="title">Projects:</h3>
+      <ExperienceCategoryItem :items="projects" />
     </section>
   </div>
 </template>
@@ -93,7 +24,8 @@ export default ({
   props: {
     educations: Array,
     jobs: Array,
-    projects: Array
+    projects: Array,
+    certificates: Array
   },
 })
 </script>

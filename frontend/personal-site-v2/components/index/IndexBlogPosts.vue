@@ -2,7 +2,7 @@
   <section class="section">
     <h2 class="title is-3">Recent blog posts</h2>
     <div class="columns">
-      <div class="column" v-for="post in blogPosts" :key="post.guid">
+      <div class="column" v-for="(post, index) in blogPosts" :key="`blog-post-${index}`">
         <div class="card">
           <div class="card-content">
             <h3 class="title is-5" v-if="post.title">{{ post.title._text }}</h3>
@@ -43,7 +43,6 @@ export default ({
         const data = JSON.parse(
           convert.xml2json(res, { compact: true, spaces: 2 })
         );
-        console.log(data.rss.channel.item);
         if (data && data.rss && data.rss.channel && data.rss.channel.item) {
           this.blogPosts = data.rss.channel.item.slice(0, 2);
         }

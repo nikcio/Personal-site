@@ -1,17 +1,17 @@
 <template>
-  <BlogPostList />
+  <div>
+    <HireMeHero />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'BlogPage',
+  name: 'HireMePage',
   head() {
     return {
-      title: "Blog"
+      title: "Hire me!"
     }
   }
 }
 </script>
 
-<style>
-</style>

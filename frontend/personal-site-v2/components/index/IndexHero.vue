@@ -7,7 +7,7 @@
           <br />I'm Nikolaj
         </h1>
         <p class="subtitle is-4">
-          I’m a web developer based in Denmark who loves to craft attractive
+          I’m a web developer based in Denmark, who loves to craft attractive
           design experiences for the web.
         </p>
         <div class="buttons">
@@ -24,6 +24,7 @@
             label="Follow my GitHub"
             tag="a"
             href="https://github.com/nikcio/"
+            target="_blank"
             icon-left="brands fa-github"
             icon-pack="fa"
           />

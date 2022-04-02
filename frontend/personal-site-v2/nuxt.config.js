@@ -45,6 +45,7 @@ export default {
   build: {
     postcss: {
       plugins: {
+        "postcss-css-variables": {},
         tailwindcss: {},
         autoprefixer: {},
       },

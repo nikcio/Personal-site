@@ -1,8 +1,8 @@
 <template>
   <section class="section">
-    <h2 class="title is-3">All blog posts</h2>
+    <h2 class="title is-3">RSS blog posts feed</h2>
     <div class="columns is-multiline">
-      <div class="column is-full" v-for="post in blogPosts" :key="post.guid">
+      <div class="column is-full" v-for="(post, index) in blogPosts" :key="`blog-post-${index}`">
         <div class="card">
           <div class="card-content">
             <h3 class="title is-5" v-if="post.title">{{ post.title._text }}</h3>

@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "yarn && nuxt",
+    "build": "yarn && nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:prettier",
-    "lintfix": "prettier --write --list-different ."
+    "generate": "yarn && nuxt generate",
+    "lint:prettier": "yarn && prettier --check .",
+    "lint": "yarn && yarn lint:prettier",
+    "lintfix": "yarn && prettier --write --list-different ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
@@ -31,9 +31,10 @@
     "autoprefixer": "^10.4.4",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.12",
+    "postcss-css-variables": "^0.18.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
-    "sass-loader": "10",
+    "sass-loader": "^10.1.1",
     "tailwindcss": "^3.0.23"
   }
 }
