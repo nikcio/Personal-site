@@ -1,24 +1,28 @@
 <template>
-    <component :is="tag" class="button" :class="classes" :disabled="disabled" :type="type" @click="onClick" :target="target" :href="href">
-        <span v-if="iconLeft" class="icon">
-            <font-awesome-icon :icon="iconLeft"></font-awesome-icon>
-        </span>
-        <span>{{ label }}</span>
-        <span v-if="iconRight" class="icon">
-            <font-awesome-icon :icon="iconRight"></font-awesome-icon>
-        </span>
-    </component>
+    <GButton
+        :class="
+        [
+            'button',
+            type,
+        ]"
+        :buttonType="buttonType"
+        :tag="tag"
+        :label="label"
+        :disabled="disabled"
+        :onClick="onClick"
+        :target="target"
+        :href="href" />
 </template>
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
 defineProps({
-    classes: {
-        type: String,
-        default: ''
-    },
     type: {
+        type: String as PropType<"is-base" | "is-primary" | "is-outlined" | undefined>,
+        default: 'is-base'
+    },
+    buttonType: {
         type: String as PropType<"button" | "submit" | "reset" | undefined>,
         default: 'button'
     },
@@ -31,14 +35,6 @@ defineProps({
         default: undefined
     },
     label: {
-        type: String,
-        default: ''
-    },
-    iconLeft: {
-        type: String,
-        default: ''
-    },
-    iconRight: {
         type: String,
         default: ''
     },
@@ -58,15 +54,16 @@ defineProps({
 </script>
 
 <style scoped>
+/* Find more styles here: https://flowbite.com/docs/components/buttons */
 .button {
-    border-radius: 0;
-    border: 1px solid #000;
-    background-color: #000;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    @apply text-white text-center font-medium text-sm px-5 py-2.5 mr-2 mb-2 border-2 bg-gray-800 border-gray-800 hover:bg-gray-900 hover:border-gray-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:border-gray-700
+}
+
+.button.is-primary {
+    @apply bg-blue-700 border-blue-600 hover:border-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+}
+
+.button.is-outlined {
+    @apply bg-transparent border-2 border-gray-800 text-gray-800 hover:bg-blue-700 hover:text-white dark:border-blue-600 dark:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-white
 }
 </style>

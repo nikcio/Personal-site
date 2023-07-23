@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  personal-site_website-fe:
-    container_name: personal-site_website-fe-v2
-    build:
-      context: .
-      dockerfile: Dockerfile-build
