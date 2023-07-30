@@ -1,20 +1,24 @@
 <template>
-    <GNavbar>
-        <template #brand>
-            <NuxtLink :to="{ path: '/' }" class="flex items-center">
-                <span class="font-bold text-3xl mr-2">Nikcio</span>
-            </NuxtLink>
-        </template>
-        <template #navbarItems>
-            <ul>
-                <NavbarItem name="Home" :to="{ path: '/' }" :currentPage="true" />
-                <NavbarItem name="Blog" :to="{ path: '/blog' }" />
-                <NavbarItem name="Experience" :to="{ path: 'experience' }" />
-            </ul>
-        </template>
-    </GNavbar>
+  <GNavbar nav-classes="px-4 py-3" container-classes="flex items-center justify-between"
+    menu-toggle-classes="block md:hidden" @menu-toggle="(menuExpanded) => navbarOpen = menuExpanded">
+    <template #brand>
+      <NuxtLink :to="{ path: '/' }" class="flex items-center">
+        <span class="font-bold text-4xl mr-2 text-primary">Nikcio</span>
+      </NuxtLink>
+    </template>
+    <template #navbarItems>
+      <div class="md:flex flex-row items-center space-x-4" :class="{ 'hidden': navbarOpen }">
+        <NavbarItem name="Home" :to="{ path: '/' }" :currentPage="true" />
+        <NavbarItem name="Blog" :to="{ path: '/blog' }" />
+        <NavbarItem name="Experience" :to="{ path: 'experience' }" />
+      </div>
+    </template>
+  </GNavbar>
 </template>
 
+<script setup lang="ts">
+let navbarOpen = ref(false);
+</script>
 
 <style scoped>
 .navbar-start a.navbar-item {

@@ -12,13 +12,11 @@
                 <template #default>
                     <span class="sr-only">Open main menu</span>
                     <slot default>
-                        <GIcon icon="fa-solid fa-bars" />
+                        <GIcon :icon="['fas', 'fa-bars']" />
                     </slot>
                 </template>
             </GButton>
-            <div :id="navbarName">
-                <slot name="navbarItems"></slot>
-            </div>
+            <slot name="navbarItems"></slot>
         </div>
     </nav>
 </template>
@@ -40,13 +38,16 @@ defineProps({
     menuToggleClasses: {
         type: String,
         default: ''
-    }
+    },
 })
+
+const emit = defineEmits(['menuToggle']);
 
 let navbarExpanded = ref(false);
 
 const expandMenu = (event: MouseEvent) => {
     event.preventDefault();
     navbarExpanded.value = !navbarExpanded.value;
+    emit('menuToggle', navbarExpanded.value);
 }
 </script>

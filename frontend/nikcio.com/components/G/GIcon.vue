@@ -20,7 +20,7 @@ import { PropType } from 'vue';
 
 defineProps({
     icon: {
-        type: String,
+        type: [String],
         default: '',
         requred: true
     },

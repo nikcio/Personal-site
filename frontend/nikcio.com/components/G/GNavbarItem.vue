@@ -1,7 +1,5 @@
 <template>
-    <li>
-        <NuxtLink :to="to" :class="classes" :aria-current="CurrentPage">{{ name }}</NuxtLink>
-    </li>
+    <NuxtLink :to="to" :class="classes" :aria-current="CurrentPage">{{ name }}</NuxtLink>
 </template>
 
 <script setup lang="ts">

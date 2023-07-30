@@ -11,7 +11,17 @@
         :disabled="disabled"
         :onClick="onClick"
         :target="target"
-        :href="href" />
+        :href="href">
+        <template #before-label>
+            <slot name="before-label"></slot>
+        </template>
+        <template #default>
+            <slot default></slot>
+        </template>
+        <template #after-label>
+            <slot name="after-label"></slot>
+        </template>
+        </GButton>
 </template>
 
 <script setup lang="ts">

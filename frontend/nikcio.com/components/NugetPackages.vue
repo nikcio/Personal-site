@@ -13,8 +13,8 @@
                 tag="a"
                 target="_blank"
                 :href="item.github">
-                <template #after-label>
-                  <GIcon icon="fab-github" />
+                <template #before-label>
+                  <GIcon :icon="['fab', 'github']" class="mr-2" />
                 </template>
               </Button>
               <Button

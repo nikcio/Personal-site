@@ -17,8 +17,8 @@
               label="Email me"
               tag="a"
               href="mailto:devnikcio@gmail.com">
-              <template #after-label>
-                <GIcon icon="fas-paper-plane" />
+              <template #before-label>
+                <GIcon :icon="['fas', 'paper-plane']" class="mr-2" />
               </template>
             </Button>
             <Button
@@ -27,8 +27,8 @@
               tag="a"
               href="https://github.com/nikcio/"
               target="_blank">
-              <template #after-label>
-                <GIcon icon="fab-github" />
+              <template #before-label>
+                <GIcon :icon="['fab', 'github']" class="mr-2" />
               </template>
             </Button>
           </div>
